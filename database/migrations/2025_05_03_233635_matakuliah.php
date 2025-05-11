@@ -19,6 +19,9 @@ return new class extends Migration
         $table->timestamps();
 
         $table->foreign('dosen_id')->references('id')->on('dosens')->onDelete('cascade');
+
+        $table->foreignId('mahasiswa_id')->constrained()->onDelete('cascade');
+        $table->foreignId('matakuliah_id')->constrained()->onDelete('cascade');
     });
 }
 
