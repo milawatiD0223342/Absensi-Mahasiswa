@@ -45,4 +45,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // User.php
+public function isDosen()
+{
+    return $this->role === 'dosen'; // atau role_id === 2 jika pakai role ID
+}
+
 }
